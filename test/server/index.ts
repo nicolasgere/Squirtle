@@ -12,6 +12,6 @@ server.use(session({
   saveUninitialized: true,
   cookie: { secure: false  }
 }))
-server.addService([MongoService]);
+
 server.addControlleur(UserController);
 server.listen(process.env.PORT || 3001);
