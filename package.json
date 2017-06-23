@@ -1,0 +1,36 @@
+{
+  "name": "Jolteon",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "rm -rf build && tsc --outDir build && mocha build/test",
+    "start-dev": "rm -rf build && tsc --outDir build && node build/test/server/index.js",
+    "build": "tsc --outDir build",
+    "start": "node build/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/assert": "0.0.31",
+    "@types/body-parser": "^1.16.3",
+    "@types/express": "^4.0.35",
+    "@types/express-session": "^0.0.32",
+    "@types/mocha": "^2.2.41",
+    "@types/mongodb": "^2.2.2",
+    "@types/node": "^7.0.22",
+    "@types/typescript": "*",
+    "assert": "^1.4.1",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-session": "^1.15.3",
+    "reflect-metadata": "^0.1.10"
+  },
+  "devDependencies": {
+    "@types/should": "^8.3.0",
+    "@types/supertest": "^2.0.1",
+    "mocha": "^3.4.2",
+    "should": "^11.2.1",
+    "supertest": "^3.0.0"
+  }
+}
