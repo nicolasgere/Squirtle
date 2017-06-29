@@ -1,6 +1,5 @@
 import { Salameche, Route,HttpGet, HttpPost, Injectable } from "./../../index";
 import  { UserController } from "./controllers/user";
-import { MongoService } from "./services/dbService";
 import * as session from 'express-session';
 
 import { SimpleController }  from "./controllers/simple";

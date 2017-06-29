@@ -1,9 +1,9 @@
 import { Salameche, Route, HttpGet, HttpPost, Injectable } from "./../../../index";
-import { MongoService } from "./../services/dbService";
+
 
 @Route("api/[controller]")
 export class UserController {
-    constructor(private db:MongoService){
+    constructor(){
     }
 
     @HttpGet
@@ -12,13 +12,13 @@ export class UserController {
     }
 
     @HttpGet
-    public GetById(id:string): Promise<any> {
-        return this.db.users.find({_id:id}).toArray();
+    public GetById(id:string): any {
+       return {"TEST":"OK"};
     }
 
     @HttpPost
-    public Post(email:string,age:number):Promise<any>{
-        return this.db.users.insert({email,age});
+    public Post(email:string,age:number):any{
+         return {"TEST":"OK"};
     }
 
 }
