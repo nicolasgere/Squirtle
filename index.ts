@@ -62,8 +62,7 @@ export class Salameche {
         this.middlewares.push(obj);
     }
 
-    public addService(services: Array<any>) {
-        services.forEach(service => {
+    public addService(service: any) {
             let tempInject = Reflect.getMetadata("design:paramtypes", service);
             if (tempInject == undefined) {
                 this.services.push(new service())
@@ -71,7 +70,6 @@ export class Salameche {
                 let toInject = tempInject.map(item => this.services.find(service => service.constructor.name == item.name));
                 this.services.push(new service(...toInject))
             }
-        })
     }
 
     public listen(port:number = 4000) {
@@ -85,7 +83,17 @@ export class Salameche {
         app.listen(port);
         console.log(`server listen port ${port}`)
     }
-    public getApp(port:number = 4000) {
+
+    public init(obj:any, test:boolean = false) {
+        if(!obj.port) obj.port = 4000;
+
+      if(obj.services) obj.services.forEach(x => this.addService(x));
+
+
+      if(!obj.controllers && !(obj.controllers.length > 0)) throw new Error("Controllers is missings");
+      obj.controllers.forEach(x => this.addControlleur(x));
+
+      if(test){
         const app = express();
         app.use(bodyParser.json());
         this.middlewares.forEach(middleware => {
@@ -95,5 +103,20 @@ export class Salameche {
         app.use(router.exec.bind(router));
         //app.listen(port);
         return app;
+      }else {
+        const app = express();
+        app.use(bodyParser.json());
+        this.middlewares.forEach(middleware => {
+            app.use(middleware);
+        });
+        let router = new Router(this.controllers);
+        app.use(router.exec.bind(router));
+        app.listen(obj.port);
+        console.log(`server listen port ${obj.port}`)
+      }
+    }
+    public getApp(port:number = 4000) {
+
+
     }
 }

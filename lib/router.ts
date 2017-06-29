@@ -26,10 +26,12 @@ export class Router  {
             }
             next();
         } catch (e) {
+          console.log(e);
             if (e == 404) {
               res.status(404).send('Path not found')
 
             } else {
+
                 res.status(500).send(e)
             }
         }

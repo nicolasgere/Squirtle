@@ -6,24 +6,27 @@ import * as  request from 'supertest';
 let done;
 import { Salameche, Route,HttpGet, HttpPost, Injectable } from "./../index";
 import  { SimpleController } from "./server/controllers/simple";
+import  { SimpleInjectionController } from "./server/controllers/simpleInjection";
 import  { Simple2Controller } from "./server/controllers/simple2";
+import  { SimpleService } from "./server/services/simpleService";
+import  { SimpleService2 } from "./server/services/simpleService0";
 
+let Request:any = request('http://127.0.0.1:4000');
 
-let app;
 
 
 describe('Verify routing:', function() {
-  before(function(){
+  before(function(done){
     let server = new Salameche();
-
-    server.addControlleur(SimpleController);
-    server.addControlleur(Simple2Controller);
-
-    app = server.getApp();
+    server.init({
+      controllers:[SimpleController,Simple2Controller, SimpleInjectionController],
+      services:[SimpleService2,SimpleService]
+    });
+    setTimeout(done,1000)
   }),
   describe('In controller routing', function() {
     it('should return get', function(done) {
-      request(app)
+      Request
       .get('/api/simple')
       .expect(200)
       .end(function(err, res) {
@@ -33,7 +36,7 @@ describe('Verify routing:', function() {
       });
     });
     it('should return get from simple2', function(done) {
-      request(app)
+    Request
       .get('/api/foo')
       .expect(200)
       .end(function(err, res) {
@@ -43,7 +46,7 @@ describe('Verify routing:', function() {
       });
     });
     it('should return 404 for controller bar', function(done) {
-      request(app)
+    Request
       .get('/api/bar')
       .expect(404)
       .end(function(err, res) {
@@ -52,7 +55,7 @@ describe('Verify routing:', function() {
       });
     });
     it('should return 404 for router', function(done) {
-      request(app)
+    Request
       .post('/api/foo')
       .expect(404)
       .end(function(err, res) {
@@ -61,7 +64,7 @@ describe('Verify routing:', function() {
       });
     });
     it('should return post', function(done) {
-      request(app)
+    Request
       .post('/api/simple')
       .expect(200)
       .end(function(err, res) {
@@ -71,7 +74,7 @@ describe('Verify routing:', function() {
       });
     });
     it('should return get', function(done) {
-      request(app)
+    Request
       .delete('/api/simple')
       .expect(200)
       .end(function(err, res) {
@@ -81,7 +84,7 @@ describe('Verify routing:', function() {
       });
     });
     it('should return foo', function(done) {
-      request(app)
+    Request
       .get('/api/simple/foo')
       .expect(200)
       .end(function(err, res) {
@@ -91,7 +94,7 @@ describe('Verify routing:', function() {
       });
     });
     it('should return bar', function(done) {
-      request(app)
+    Request
       .get('/api/simple/bar')
       .expect(200)
       .end(function(err, res) {
@@ -101,7 +104,7 @@ describe('Verify routing:', function() {
       });
     });
     it('should return good parameters in body', function(done) {
-      request(app)
+    Request
       .delete('/api/simple')
       .expect(200)
       .send({param1:"param1",param2:"param2",param3:"param3"})
@@ -114,7 +117,7 @@ describe('Verify routing:', function() {
       });
     });
     it('should return good parameters in query', function(done) {
-      request(app)
+    Request
       .get('/api/foo?params1=params1&params2=params2&params3=params3')
       .expect(200)
       .end(function(err, res) {
@@ -127,24 +130,24 @@ describe('Verify routing:', function() {
     });
 
   });
-});
-
-
-describe('Check injection', function() {
-  before(function(){
-    let server = new Salameche();
-
-    server.addControlleur(SimpleController);
-    app = server.getApp();
-  }),
-  describe('In controller routing', function() {
-    it('should return get', function(done) {
-      request(app)
-      .get('/api/simple')
+  describe('Injection', function() {
+    it('should return injection1', function(done) {
+     Request
+      .get('/api/injection')
       .expect(200)
       .end(function(err, res) {
         if (err) throw err;
-        assert.equal(res.body.value,'get', "wrong route");
+        assert.equal(res.body.value,'injection1', "wrong inject");
+        done();
+      });
+    });
+    it('should return injection2', function(done) {
+     Request
+      .get('/api/injection/injection2')
+      .expect(200)
+      .end(function(err, res) {
+        if (err) throw err;
+        assert.equal(res.body.value,'injection2', "wrong inject");
         done();
       });
     });

@@ -1,14 +1,18 @@
 import { Injectable } from "./../../../index";
+import { SimpleService2 } from "./simpleService0";
 
 
 @Injectable
 export class SimpleService {
 
-    constructor() {
+    constructor(private simpleService2:SimpleService2) {
 
     }
 
-    public getName() {
-      return 'SimpleService'
+    getName():string {
+      return 'injection1'
+    }
+    getName2():string {
+      return this.simpleService2.getName();
     }
 }

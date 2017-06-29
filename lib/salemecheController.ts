@@ -14,6 +14,8 @@ export class SalamecheController {
     private toInject:any = [];
     constructor(obj: any, services: Array<any>, controllers:any, routeMetadataKey ) {
         let tempInject = Reflect.getMetadata("design:paramtypes", obj);
+
+
         if (tempInject == undefined) {
         } else {
             this.toInject = tempInject.map(item => services.find(service => service.constructor.name == item.name));
