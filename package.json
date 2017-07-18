@@ -9,7 +9,19 @@
     "build": "tsc --outDir build",
     "start": "node build/index.js"
   },
-  "author": "",
+  "keywords": [
+    "framework",
+    "backend",
+    "typescript",
+    "decorator",
+    "metadata"
+  ],
+  "homepage": "https://github.com/nicolasgere/squirtle",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicolasgere/squirtle.git"
+  },
+  "author": "Nicolas Gere-lamaysouette",
   "license": "ISC",
   "dependencies": {
     "@types/assert": "0.0.31",
