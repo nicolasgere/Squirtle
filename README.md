@@ -20,10 +20,45 @@ And the controller:
 
 ```ts
 @Route("api/[controller]")
-export class UserController extends Controller {
+class UserController extends Controller {
     @HttpGet
     public Get(): User {
         return new User();
     }    
 }
 ```
+
+### How to use it?
+
+This package is only for TS, and need this 3 options in tsconfig.json : 
+```js
+    "compilerOptions": {
+       "target": "es6",
+       "emitDecoratorMetadata": true,
+       "experimentalDecorators": true
+   }
+}
+```
+
+Once we have everything setup, we can create a server 
+```ts
+const server = new Squirtle();
+
+server.init({
+  controllers: [SimpleController],
+  port: 8080
+});
+
+``` 
+and the controller 
+```ts
+@Route("api/[controller]")
+class VersionController extends Controller {
+    @HttpGet
+    public Get(): any {
+        return {version: '1.0.0'};
+    }    
+}
+``` 
+
+We can hit this handlers using ``` http://localhost:8080/api/version ```
