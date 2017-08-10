@@ -1,12 +1,12 @@
 import * as  express from 'express';
-import {SalamecheController} from './salemecheController'
+import {SquirtleController} from './squirtleController'
 
 export class Router  {
-    constructor(private controllers: Array<SalamecheController>) {
+    constructor(private controllers: Array<SquirtleController>) {
     }
     async exec(req: express.Request, res: express.Response, next: any) {
 
-        let controller = this.controllers.find((item: SalamecheController) => {
+        let controller = this.controllers.find((item: SquirtleController) => {
             return item.isPathValid(req.path);
         })
 
@@ -18,7 +18,7 @@ export class Router  {
         try {
             let obj = controller.execute(req, req.method);
             res.header("Content-Type", "application/json" );
-            if (obj.result.then) {
+            if (obj.result && obj.result.then) {
                 let rep = await obj.result;
                 res.status(obj.statusCode |200).send(rep);
             } else {

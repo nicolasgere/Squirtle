@@ -1,8 +1,9 @@
-import { Salameche, Route, HttpGet, HttpPost,HttpDelete, Injectable } from "./../../../index";
+import { Route, HttpGet, HttpPost,HttpDelete, Injectable, Controller } from "./../../../index";
 
 @Route("api/[controller]")
-export class SimpleController {
+export class SimpleController extends Controller{
     constructor(){
+        super();
     }
 
     @HttpGet

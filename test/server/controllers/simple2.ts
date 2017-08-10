@@ -1,4 +1,4 @@
-import { Salameche, Route, HttpGet, HttpPost,HttpDelete, Injectable } from "./../../../index";
+import { Squirtle, Route, HttpGet, HttpPost,HttpDelete, Injectable } from "./../../../index";
 
 @Route("api/foo")
 export class Simple2Controller {
