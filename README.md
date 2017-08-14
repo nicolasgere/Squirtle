@@ -1,4 +1,4 @@
-# Squirtle [![Build Status](https://travis-ci.org/nicolasgere/Squirtle.svg?branch=master)](https://travis-ci.org/nicolasgere/squirtle)[![npm version](https://badge.fury.io/js/squirtle.svg)](https://badge.fury.io/js/squirtle)
+# Squirtle [![Build Status](https://travis-ci.org/nicolasgere/squirtle.svg?branch=master)](https://travis-ci.org/nicolasgere/squirtle)[![npm version](https://badge.fury.io/js/squirtle.svg)](https://badge.fury.io/js/squirtle)
 A typescript backend framework using the convention over configuration pattern and dependency injection. Inspire by dotnetmvc, angular2 and express.
 
 ## Getting Started
