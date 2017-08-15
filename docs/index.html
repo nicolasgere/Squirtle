@@ -53,7 +53,7 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="globals.html">Globals</a>
+					<a href="index.html">Globals</a>
 				</li>
 			</ul>
 			<h1> squirtle</h1>
@@ -63,112 +63,396 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<div class="tsd-panel tsd-typography">
-				<h1 id="squirtle-build-status-https-travis-ci-org-nicolasgere-squirtle-svg-branch-master-https-travis-ci-org-nicolasgere-squirtle-npm-version-https-badge-fury-io-js-squirtle-svg-https-badge-fury-io-js-squirtle-">Squirtle <a href="https://travis-ci.org/nicolasgere/Squirtle"><img src="https://travis-ci.org/nicolasgere/Squirtle.svg?branch=master" alt="Build Status"></a><a href="https://badge.fury.io/js/squirtle"><img src="https://badge.fury.io/js/squirtle.svg" alt="npm version"></a></h1>
-				<p>A typescript backend framework using the convention over configuration pattern and dependency injection. Inspire by dotnetmvc, angular2 and express.</p>
-				<h2 id="getting-started">Getting Started</h2>
-				<p>That package is currently in development and not ready for PRODUCTION. Feel free to contribute, any issues, pull request or stars are welcome.</p>
-				<h3 id="simple-exemple">Simple Exemple</h3>
-				<pre><code class="lang-ts"><span class="hljs-keyword">const</span> server = <span class="hljs-keyword">new</span> Squirtle();
-
-server.init({
-  controllers: [UserController],
-  port: <span class="hljs-number">8080</span>
-});
-</code></pre>
-				<p>And the controller: </p>
-				<pre><code class="lang-ts"><span class="hljs-meta">@Route</span>(<span class="hljs-string">"api/[controller]"</span>)
-<span class="hljs-keyword">class</span> UserController <span class="hljs-keyword">extends</span> Controller {
-    <span class="hljs-meta">@HttpGet</span>
-    <span class="hljs-keyword">public</span> Get(): User {
-        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> User();
-    }    
-}
-</code></pre>
-				<h3 id="how-to-use-it-">How to use it?</h3>
-				<p>This package is only for TS, and need this 3 options in tsconfig.json : </p>
-				<pre><code class="lang-js">    <span class="hljs-string">"compilerOptions"</span>: {
-       <span class="hljs-string">"target"</span>: <span class="hljs-string">"es6"</span>,
-       <span class="hljs-string">"emitDecoratorMetadata"</span>: <span class="hljs-literal">true</span>,
-       <span class="hljs-string">"experimentalDecorators"</span>: <span class="hljs-literal">true</span>
-   }
-}
-</code></pre>
-				<p>Once we have everything setup, we can create a server </p>
-				<pre><code class="lang-ts"><span class="hljs-keyword">const</span> server = <span class="hljs-keyword">new</span> Squirtle();
-
-server.init({
-  controllers: [SimpleController],
-  port: <span class="hljs-number">8080</span>
-});
-</code></pre>
-				<p>and the controller </p>
-				<pre><code class="lang-ts"><span class="hljs-meta">@Route</span>(<span class="hljs-string">"api/[controller]"</span>)
-<span class="hljs-keyword">class</span> VersionController <span class="hljs-keyword">extends</span> Controller {
-    <span class="hljs-meta">@HttpGet</span>
-    <span class="hljs-keyword">public</span> Get(): <span class="hljs-built_in">any</span> {
-        <span class="hljs-keyword">return</span> {version: <span class="hljs-string">'1.0.0'</span>};
-    }    
-}
-</code></pre>
-				<p>We can hit this handlers using <code>http://localhost:8080/api/version</code></p>
-			</div>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class"><a href="classes/controller.html" class="tsd-kind-icon">Controller</a></li>
+								<li class="tsd-kind-class"><a href="classes/squirtle.html" class="tsd-kind-icon">Squirtle</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface"><a href="interfaces/configuration.html" class="tsd-kind-icon">Configuration</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-not-exported">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable tsd-is-not-exported"><a href="index.html#controllers" class="tsd-kind-icon">controllers</a></li>
+								<li class="tsd-kind-variable tsd-is-not-exported"><a href="index.html#injectmetadatakey" class="tsd-kind-icon">inject<wbr>Metadata<wbr>Key</a></li>
+								<li class="tsd-kind-variable tsd-is-not-exported"><a href="index.html#routemetadatakey" class="tsd-kind-icon">route<wbr>Metadata<wbr>Key</a></li>
+								<li class="tsd-kind-variable tsd-is-not-exported"><a href="index.html#typemetadatakey" class="tsd-kind-icon">type<wbr>Metadata<wbr>Key</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function"><a href="index.html#httpdelete" class="tsd-kind-icon">Http<wbr>Delete</a></li>
+								<li class="tsd-kind-function"><a href="index.html#httpget" class="tsd-kind-icon">Http<wbr>Get</a></li>
+								<li class="tsd-kind-function"><a href="index.html#httppost" class="tsd-kind-icon">Http<wbr>Post</a></li>
+								<li class="tsd-kind-function"><a href="index.html#httpput" class="tsd-kind-icon">Http<wbr>Put</a></li>
+								<li class="tsd-kind-function"><a href="index.html#injectable" class="tsd-kind-icon">Injectable</a></li>
+								<li class="tsd-kind-function"><a href="index.html#route" class="tsd-kind-icon">Route</a></li>
+								<li class="tsd-kind-function tsd-is-not-exported"><a href="index.html#_httpmethod" class="tsd-kind-icon">_http<wbr>Method</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-not-exported">
+					<a name="controllers" class="tsd-anchor"></a>
+					<h3>controllers</h3>
+					<div class="tsd-signature tsd-kind-icon">controllers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/nicolasgere/squirtle/blob/18ed64f/index.ts#L12">index.ts:12</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-not-exported">
+					<a name="injectmetadatakey" class="tsd-anchor"></a>
+					<h3>inject<wbr>Metadata<wbr>Key</h3>
+					<div class="tsd-signature tsd-kind-icon">inject<wbr>Metadata<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol"> =&nbsp;Symbol(&quot;inject&quot;)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/nicolasgere/squirtle/blob/18ed64f/index.ts#L5">index.ts:5</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-not-exported">
+					<a name="routemetadatakey" class="tsd-anchor"></a>
+					<h3>route<wbr>Metadata<wbr>Key</h3>
+					<div class="tsd-signature tsd-kind-icon">route<wbr>Metadata<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol"> =&nbsp;Symbol(&quot;route&quot;)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/nicolasgere/squirtle/blob/18ed64f/index.ts#L3">index.ts:3</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-not-exported">
+					<a name="typemetadatakey" class="tsd-anchor"></a>
+					<h3>type<wbr>Metadata<wbr>Key</h3>
+					<div class="tsd-signature tsd-kind-icon">type<wbr>Metadata<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol"> =&nbsp;Symbol(&quot;type&quot;)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/nicolasgere/squirtle/blob/18ed64f/index.ts#L4">index.ts:4</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="httpdelete" class="tsd-anchor"></a>
+					<h3>Http<wbr>Delete</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">Http<wbr>Delete<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/nicolasgere/squirtle/blob/18ed64f/index.ts#L46">index.ts:46</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Decorator for a DELETE handler</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>target: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>key: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="httpget" class="tsd-anchor"></a>
+					<h3>Http<wbr>Get</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">Http<wbr>Get<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/nicolasgere/squirtle/blob/18ed64f/index.ts#L36">index.ts:36</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Decorator for a GET handler</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>target: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>key: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="httppost" class="tsd-anchor"></a>
+					<h3>Http<wbr>Post</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">Http<wbr>Post<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/nicolasgere/squirtle/blob/18ed64f/index.ts#L41">index.ts:41</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Decorator for a POST handler</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>target: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>key: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="httpput" class="tsd-anchor"></a>
+					<h3>Http<wbr>Put</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">Http<wbr>Put<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/nicolasgere/squirtle/blob/18ed64f/index.ts#L51">index.ts:51</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Decorator for a PUT handler</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>target: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>key: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="injectable" class="tsd-anchor"></a>
+					<h3>Injectable</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">Injectable<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/nicolasgere/squirtle/blob/18ed64f/index.ts#L19">index.ts:19</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Made this class injectable in another service or controller.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>target: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="route" class="tsd-anchor"></a>
+					<h3>Route</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">Route<span class="tsd-signature-symbol">(</span>route<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/nicolasgere/squirtle/blob/18ed64f/index.ts#L26">index.ts:26</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Decorator for define base route for controller</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> route: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>api/[controller] will use the controller name as path, api/foobar will overwrite it</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">function</span></h4>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter-siganture">
+									<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+										<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+										<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object</span>, propertyKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+									</ul>
+									<ul class="tsd-descriptions">
+										<li class="tsd-description">
+											<h4 class="tsd-parameters-title">Parameters</h4>
+											<ul class="tsd-parameters">
+												<li>
+													<h5>target: <span class="tsd-signature-type">Function</span></h5>
+												</li>
+											</ul>
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+										</li>
+										<li class="tsd-description">
+											<h4 class="tsd-parameters-title">Parameters</h4>
+											<ul class="tsd-parameters">
+												<li>
+													<h5>target: <span class="tsd-signature-type">Object</span></h5>
+												</li>
+												<li>
+													<h5>propertyKey: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span></h5>
+												</li>
+											</ul>
+											<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-is-not-exported">
+					<a name="_httpmethod" class="tsd-anchor"></a>
+					<h3>_http<wbr>Method</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">_http<wbr>Method<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, method<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/nicolasgere/squirtle/blob/18ed64f/index.ts#L31">index.ts:31</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>target: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>key: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>method: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
-					<li class="globals  ">
-						<a href="globals.html"><em>Globals</em></a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_index_.html">"index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_lib_configuration_.html">"lib/configuration"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_lib_route_.html">"lib/route"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_lib_router_.html">"lib/router"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_lib_squirtlecontroller_.html">"lib/squirtle<wbr>Controller"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_test_1_routing_test_.html">"test/1-<wbr>routing-<wbr>test"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_test_2_injection_test_.html">"test/2-<wbr>injection-<wbr>test"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_test_server_controllers_session_.html">"test/server/controllers/session"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_test_server_controllers_simple_.html">"test/server/controllers/simple"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_test_server_controllers_simple2_.html">"test/server/controllers/simple2"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_test_server_controllers_simpleinjection_.html">"test/server/controllers/simple<wbr>Injection"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_test_server_controllers_user_.html">"test/server/controllers/user"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_test_server_index_.html">"test/server/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_test_server_services_simpleservice_.html">"test/server/services/simple<wbr>Service"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="modules/_test_server_services_simpleservice0_.html">"test/server/services/simple<wbr>Service0"</a>
+					<li class="globals current ">
+						<a href="index.html"><em>Globals</em></a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class">
+						<a href="classes/controller.html" class="tsd-kind-icon">Controller</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/squirtle.html" class="tsd-kind-icon">Squirtle</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/configuration.html" class="tsd-kind-icon">Configuration</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="index.html#controllers" class="tsd-kind-icon">controllers</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="index.html#injectmetadatakey" class="tsd-kind-icon">inject<wbr>Metadata<wbr>Key</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="index.html#routemetadatakey" class="tsd-kind-icon">route<wbr>Metadata<wbr>Key</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="index.html#typemetadatakey" class="tsd-kind-icon">type<wbr>Metadata<wbr>Key</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="index.html#httpdelete" class="tsd-kind-icon">Http<wbr>Delete</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="index.html#httpget" class="tsd-kind-icon">Http<wbr>Get</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="index.html#httppost" class="tsd-kind-icon">Http<wbr>Post</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="index.html#httpput" class="tsd-kind-icon">Http<wbr>Put</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="index.html#injectable" class="tsd-kind-icon">Injectable</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="index.html#route" class="tsd-kind-icon">Route</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="index.html#_httpmethod" class="tsd-kind-icon">_http<wbr>Method</a>
+					</li>
 				</ul>
 			</nav>
 		</div>

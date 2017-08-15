@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;lib/squirtleController&quot; | squirtle</title>
+	<title>Configuration | squirtle</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -53,60 +53,111 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../globals.html">Globals</a>
+					<a href="../index.html">Globals</a>
 				</li>
 				<li>
-					<a href="_lib_squirtlecontroller_.html">&quot;lib/squirtleController&quot;</a>
+					<a href="configuration.html">Configuration</a>
 				</li>
 			</ul>
-			<h1>External module &quot;lib/squirtleController&quot;</h1>
+			<h1>Interface Configuration</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Interface for create a configuration object for the init function of the squirtle class</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">Configuration</span>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Classes</h3>
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-class tsd-parent-kind-external-module"><a href="../classes/_lib_squirtlecontroller_.squirtlecontroller.html" class="tsd-kind-icon">Squirtle<wbr>Controller</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section tsd-is-not-exported">
-							<h3>Variables</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_squirtlecontroller_.html#injectmetadatakey" class="tsd-kind-icon">inject<wbr>Metadata<wbr>Key</a></li>
-								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported"><a href="_lib_squirtlecontroller_.html#typemetadatakey" class="tsd-kind-icon">type<wbr>Metadata<wbr>Key</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="configuration.html#controllers" class="tsd-kind-icon">controllers</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="configuration.html#middlewares" class="tsd-kind-icon">middlewares</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="configuration.html#port" class="tsd-kind-icon">port</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="configuration.html#services" class="tsd-kind-icon">services</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
-				<h2>Variables</h2>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="injectmetadatakey" class="tsd-anchor"></a>
-					<h3>inject<wbr>Metadata<wbr>Key</h3>
-					<div class="tsd-signature tsd-kind-icon">inject<wbr>Metadata<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol"> =&nbsp;Symbol(&quot;inject&quot;)</span></div>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="controllers" class="tsd-anchor"></a>
+					<h3>controllers</h3>
+					<div class="tsd-signature tsd-kind-icon">controllers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/nicolasgere/squirtle/blob/008f55e/lib/squirtleController.ts#L5">lib/squirtleController.ts:5</a></li>
+							<li>Defined in interface/configuration.ts:10</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>List of class: SHOULD extends Controller</p>
+						</div>
+					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-					<a name="typemetadatakey" class="tsd-anchor"></a>
-					<h3>type<wbr>Metadata<wbr>Key</h3>
-					<div class="tsd-signature tsd-kind-icon">type<wbr>Metadata<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol"> =&nbsp;Symbol(&quot;type&quot;)</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="middlewares" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> middlewares</h3>
+					<div class="tsd-signature tsd-kind-icon">middlewares<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/nicolasgere/squirtle/blob/008f55e/lib/squirtleController.ts#L4">lib/squirtleController.ts:4</a></li>
+							<li>Defined in interface/configuration.ts:14</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>List of middlewares: Should be a function (req,res,next) see</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="port" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> port</h3>
+					<div class="tsd-signature tsd-kind-icon">port<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in interface/configuration.ts:16</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Port listening by the server, by default 4000</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="services" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> services</h3>
+					<div class="tsd-signature tsd-kind-icon">services<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in interface/configuration.ts:12</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>List of class: SHOULD be Injectable</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -114,65 +165,71 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class="globals  ">
-						<a href="../globals.html"><em>Globals</em></a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_index_.html">"index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_lib_configuration_.html">"lib/configuration"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_lib_route_.html">"lib/route"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_lib_router_.html">"lib/router"</a>
-					</li>
-					<li class="current tsd-kind-external-module">
-						<a href="_lib_squirtlecontroller_.html">"lib/squirtle<wbr>Controller"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_test_1_routing_test_.html">"test/1-<wbr>routing-<wbr>test"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_test_2_injection_test_.html">"test/2-<wbr>injection-<wbr>test"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_test_server_controllers_session_.html">"test/server/controllers/session"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_test_server_controllers_simple_.html">"test/server/controllers/simple"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_test_server_controllers_simple2_.html">"test/server/controllers/simple2"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_test_server_controllers_simpleinjection_.html">"test/server/controllers/simple<wbr>Injection"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_test_server_controllers_user_.html">"test/server/controllers/user"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_test_server_index_.html">"test/server/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_test_server_services_simpleservice_.html">"test/server/services/simple<wbr>Service"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_test_server_services_simpleservice0_.html">"test/server/services/simple<wbr>Service0"</a>
+						<a href="../index.html"><em>Globals</em></a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-external-module">
-						<a href="../classes/_lib_squirtlecontroller_.squirtlecontroller.html" class="tsd-kind-icon">Squirtle<wbr>Controller</a>
+					<li class=" tsd-kind-class">
+						<a href="../classes/controller.html" class="tsd-kind-icon">Controller</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_lib_squirtlecontroller_.html#injectmetadatakey" class="tsd-kind-icon">inject<wbr>Metadata<wbr>Key</a>
+					<li class=" tsd-kind-class">
+						<a href="../classes/squirtle.html" class="tsd-kind-icon">Squirtle</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_lib_squirtlecontroller_.html#typemetadatakey" class="tsd-kind-icon">type<wbr>Metadata<wbr>Key</a>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface">
+						<a href="configuration.html" class="tsd-kind-icon">Configuration</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="configuration.html#controllers" class="tsd-kind-icon">controllers</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="configuration.html#middlewares" class="tsd-kind-icon">middlewares</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="configuration.html#port" class="tsd-kind-icon">port</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="configuration.html#services" class="tsd-kind-icon">services</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="../index.html#controllers" class="tsd-kind-icon">controllers</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="../index.html#injectmetadatakey" class="tsd-kind-icon">inject<wbr>Metadata<wbr>Key</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="../index.html#routemetadatakey" class="tsd-kind-icon">route<wbr>Metadata<wbr>Key</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="../index.html#typemetadatakey" class="tsd-kind-icon">type<wbr>Metadata<wbr>Key</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../index.html#httpdelete" class="tsd-kind-icon">Http<wbr>Delete</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../index.html#httpget" class="tsd-kind-icon">Http<wbr>Get</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../index.html#httppost" class="tsd-kind-icon">Http<wbr>Post</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../index.html#httpput" class="tsd-kind-icon">Http<wbr>Put</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../index.html#injectable" class="tsd-kind-icon">Injectable</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../index.html#route" class="tsd-kind-icon">Route</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="../index.html#_httpmethod" class="tsd-kind-icon">_http<wbr>Method</a>
 					</li>
 				</ul>
 			</nav>

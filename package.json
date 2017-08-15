@@ -8,7 +8,8 @@
     "start-dev": "rm -rf build && tsc --outDir build && node build/test/server/index.js",
     "build": "tsc --outDir build",
     "start": "node build/index.js",
-    "prepublish": "tsc -d"
+    "prepublish": "tsc -d",
+    "docs":"rm -rf lib &&  rm -rf test && typedoc --out docs --mode file --readme none --ignoreCompilerErrors && git checkout lib && git checkout test"
   },
   "keywords": [
     "framework",
