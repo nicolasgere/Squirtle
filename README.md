@@ -3,7 +3,7 @@ A typescript backend framework using the convention over configuration pattern a
 
 ## Getting Started
 
-That package is currently in development and not ready for PRODUCTION. Feel free to contribute, any issues, pull request or stars are welcome. You can found the documentation [here](https://nicolasgere.github.io/squirtle/), and more exemple in the test folder.
+That package is currently in development and not ready for PRODUCTION. DONT USE IT !
 
 ### Simple Exemple
 
