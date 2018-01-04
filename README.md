@@ -3,7 +3,8 @@ A typescript backend framework using the convention over configuration pattern a
 
 ## Getting Started
 
-That package is currently in development and not ready for PRODUCTION. DONT USE IT !
+That package is currently in development and not ready for PRODUCTION.
+DONT USE IT in production
 
 ### Simple Exemple
 
